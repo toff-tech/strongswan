@@ -267,9 +267,9 @@ static struct {
 	int max_keysize;
 	signature_params_t params;
 } scheme_map[] = {
-	{ KEY_RSA,  3072, { .scheme = SIGN_RSA_EMSA_PKCS1_PSS, .params = &pss_params_sha256, }},
-	{ KEY_RSA,  7680, { .scheme = SIGN_RSA_EMSA_PKCS1_PSS, .params = &pss_params_sha384, }},
-	{ KEY_RSA,     0, { .scheme = SIGN_RSA_EMSA_PKCS1_PSS, .params = &pss_params_sha512, }},
+	{ KEY_RSA,  3072, { .scheme = SIGN_RSA_EMSA_PSS, .params = &pss_params_sha256, }},
+	{ KEY_RSA,  7680, { .scheme = SIGN_RSA_EMSA_PSS, .params = &pss_params_sha384, }},
+	{ KEY_RSA,     0, { .scheme = SIGN_RSA_EMSA_PSS, .params = &pss_params_sha512, }},
 	{ KEY_RSA,  3072, { .scheme = SIGN_RSA_EMSA_PKCS1_SHA2_256 }},
 	{ KEY_RSA,  7680, { .scheme = SIGN_RSA_EMSA_PKCS1_SHA2_384 }},
 	{ KEY_RSA,     0, { .scheme = SIGN_RSA_EMSA_PKCS1_SHA2_512 }},
